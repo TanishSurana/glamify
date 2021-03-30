@@ -25,7 +25,7 @@ body
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 13vh;
+    min-height: 13vh;
     padding: 0 10px;
 
 }
@@ -61,7 +61,7 @@ body
 
 .navtext{
     display: block;
-    font-size: 12px;
+    font-size: 10px;
     color: rgb(58, 58, 58);
 }
 
@@ -77,6 +77,34 @@ body
     display: none;
 }
 
+#secnav ul
+{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(167, 198, 255);
+}
+
+#secnav ul li{
+    list-style-type: none;
+    text-align: center;
+}
+#secnav ul li a{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.submenu
+{
+    width: 100%;
+    background-color: rgb(199, 205, 255);
+    height: 60vh;
+    display: none;
+}
+
+
 @media screen and (max-width: 1224px) {
     .logo{
         flex: 2;
@@ -87,25 +115,58 @@ body
 }
 
 @media screen and (max-width: 768px) {
-    .body
-    {
-        overflow-x: hidden;
-    }
     .onright{
         position: absolute;
         left: 0px;
         width: 100%;
         height: 10vh;
         top: 13vh;
-        justify-content: space-around;
-        align-items: center;
         display: flex;
         justify-content: space-around;
-        background-color: rgb(177, 177, 245);
+        align-items: center;
         transform: translateX(-100%);
         transition: transform 0.5s ease-in;
 
     }
+
+    .onright li{
+        flex: 1;
+        margin: 0;
+        padding: 0;
+        height: 10vh;
+        border: solid;
+        border-width: 1px;
+        border-color: rgb(255, 255, 255);
+        background-color: rgb(248, 248, 248);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .onright li a{
+        
+    }
+
+    .menu{
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        height: 10vh;
+        top: 33vh;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: rgb(177, 177, 245);
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    #secnav ul li{
+        text-align: left;
+    }
+
     .burger
     {
         position: absolute;
@@ -135,6 +196,7 @@ body
 .nav-active{
     transform: translateX(0%);
 }
+
 
 @keyframes navLinkFade {
     from {
