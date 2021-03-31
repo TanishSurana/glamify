@@ -81,7 +81,8 @@ body
 {
     display: flex;
     justify-content: space-around;
-    background-color: rgb(167, 198, 255);
+    min-height: 3vh;
+    align-items: center;
 }
 
 #secnav ul li{
@@ -94,14 +95,73 @@ body
     letter-spacing: 2px;
     font-weight: 700;
     font-size: 13px;
+    transition: all 0.3s ease;
+    padding: 5px 80px;
+    border-radius: 2px;
 }
 
-.submenu
+
+.mega-box
 {
+    position: absolute;
+    top: 16vh;
     width: 100%;
-    background-color: rgb(199, 205, 255);
-    height: 60vh;
-    display: none;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgb(228, 228, 228);
+
+}
+
+.mega-box .content{
+    padding: 25px 20px;
+    display: flex;
+    max-width: 100%;
+    justify-content: space-around;
+}
+
+.mega-box .content .row
+{
+    width: calc(25% - 30px);
+    line-height: 45px;
+}
+
+.content .row .header
+{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.content .row .mega-links{
+    border-left: 1px solid rgba(255,255,255,0.09);
+  }
+
+
+  .row .mega-links li{
+    padding: 0 20px;
+  }
+  .row .mega-links li a{
+    padding: 0px;
+    padding: 0 20px;
+    color: #d9d9d9;
+    font-size: 17px;
+    display: block;
+  }
+  .row .mega-links li a:hover{
+    color: #f2f2f2;
+  }
+
+.mega-box .mega-links{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu li:hover .mega-box{
+    top: 16vh;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
 }
 
 
@@ -113,6 +173,8 @@ body
         width: 30%;
     }
 }
+
+
 
 @media screen and (max-width: 768px) {
     .onright{
