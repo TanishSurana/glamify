@@ -68,10 +68,3 @@ function showDivs(n) {
 
 var slideIndex = 1;
 showDivs(slideIndex);
-
-document.addEventListener('DOMContentLoaded', ()=>{
-
-    // banner slideshow
-
-
-})
